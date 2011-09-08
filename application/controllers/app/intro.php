@@ -24,11 +24,13 @@ class Intro extends CI_Controller {
 		$this->load->library('parser');
 		$this->load->helper('url');
 		
-
 		$this->load->view('header');
 		$data['teste']='Olá aos caractéres especiais ão ção!!!';
-		$this->load->view('intro', $data);
+		$this->load->view('app/intro', $data);
 		$this->load->view('footer');
+		
+		
+		
 		
 	}
 }

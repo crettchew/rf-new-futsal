@@ -1,25 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
-<body>
+<script type="text/javascript">
+	 $(document).ready(function(){
+	 		
+	});
+</script>
 
-<div id="container">
-<div id="header_image">header_image</div>
-	<h1>Futsal</h1>
 
-	<div id="body">
-	
- <?php 
- 	echo $teste;
- ?>
-		
-
-	<p class="footer">Página criada em <strong>{elapsed_time}</strong> segundos</p>
+<div class="breadcrumbs">
+	<?php
+	echo set_breadcrumb();
+	?>
 </div>
+<div class="title">
+	Application Name
+</div>
+<div class="sub-title">
+	Application description Application description Application description Application description
+	Application description Application description Application description Application description
+	Application description Application description Application description Application description
+	Application description Application description Application description Application description
+</div>
+<div id="body">
+	<?php
 
-</body>
-</html>
+	echo $teste;
+
+	echo anchor('app', 'Click Here');
+	?>
+</div>
