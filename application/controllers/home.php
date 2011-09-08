@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Intro extends CI_Controller {
+class Home extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,17 +19,24 @@ class Intro extends CI_Controller {
 	 */
 	public function index()
 	{
-		
-		$this->load->helper('breadcrumb'); 
+		$this->load->helper('breadcrumb');
 		$this->load->library('parser');
 		$this->load->helper('url');
-		
 
 		$this->load->view('header');
 		$data['teste']='Olá aos caractéres especiais ão ção!!!';
-		$this->load->view('intro', $data);
+		$this->load->view('home', $data);
 		$this->load->view('footer');
-		
+	}
+
+	public function login()
+	{
+		$this->load->helper('breadcrumb');
+		$this->load->library('parser');
+		$this->load->helper('url');
+		$this->load->view('header');
+		$this->load->view('login');
+		$this->load->view('footer');
 	}
 }
 

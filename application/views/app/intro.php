@@ -1,7 +1,7 @@
-
-	<div class="breadcrumbs">
+<div class="breadcrumbs">
 		<?php
-		echo set_breadcrumb();
+			$exclude = array('0' => 'home');
+	echo set_breadcrumb(' > ', $exclude);
 		?>
 	</div>
 	<div class="title">

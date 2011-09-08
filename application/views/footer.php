@@ -2,7 +2,7 @@
 	<table width="100%">
 		<tr>
 			<td style="text-align: center">(c) Copyright 2011 Romeu. All Rights Reserved.</td>
-			<td style="text-align: center">(c) Copyright 2011 Romeu. All Rights Reserved.</td>
+			<td style="text-align: center">Morada da empresa: | Contactos da empresa: 212 123 123</td>
 			<td style="text-align: center">Página gerada em <strong>{elapsed_time}</strong> segundos &nbsp;&nbsp;|&nbsp;&nbsp; Memória consumida: <strong>{memory_usage}</strong></td>
 		</tr>
 	</table>
