@@ -19,25 +19,14 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->helper('breadcrumb');
-		$this->load->library('parser');
-		$this->load->helper('url');
-
-		$this->load->view('header');
-		$data['teste']='Olá aos caractéres especiais ão ção!!!';
-		$this->load->view('home', $data);
-		$this->load->view('footer');
-	}
-
-	public function login()
-	{
-		$this->load->helper('breadcrumb');
-		$this->load->library('parser');
+		
 		$this->load->helper('url');
 		$this->load->view('header');
-		$this->load->view('login');
+		$this->load->view('home');
 		$this->load->view('footer');
 	}
+	
+	
 }
 
 /* End of file welcome.php */

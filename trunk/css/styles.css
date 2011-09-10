@@ -14,24 +14,25 @@
  color: white;
  }
  */
- 
- .clear{
- clear: both;
- }
- 
+.clear {
+	clear: both;
+}
+
 body {
 	background-color: #fff;
-	margin: 0px 40px 0px 40px;
-	font: 13px /20px normal Helvetica, Arial, sans-serif;
+	margin: 0px 0px 0px 0px;
+	font: 13px/20px normal Helvetica, Arial, sans-serif;
 	color: #4F5155;
 	background-color: #f9f9f9;
 }
+
 a {
 	color: #003399;
 	background-color: transparent;
 	font-weight: normal;
 }
-h1, .title {
+
+h1,.title {
 	color: #444;
 	background-color: transparent;
 	border-bottom: 1px solid #D0D0D0;
@@ -40,6 +41,7 @@ h1, .title {
 	margin: 0 5px 14px 5px;
 	padding: 14px 15px 10px 15px;
 }
+
 .sub-title {
 	padding-left: 10px;
 	padding-bottom: 20px;
@@ -47,6 +49,7 @@ h1, .title {
 	color: #555;
 	font-style: italic;
 }
+
 code {
 	font-family: Consolas, Monaco, Courier New, Courier, monospace;
 	font-size: 12px;
@@ -57,17 +60,22 @@ code {
 	margin: 14px 0 14px 0;
 	padding: 12px 10px 12px 10px;
 }
+
 #body {
 	margin: 0 15px 0 15px;
+	text-align: justify;
 }
+
 .footer {
 	text-align: justify;
 	font-size: 11px;
 	border-top: 1px solid #D0D0D0;
-	line-height: 32px;
+	line-height: 22px;
 	padding: 0 10px 0 10px;
 	margin: 20px 0 0 0;
+	background-color: #f6f6f6;
 }
+
 #container {
 	background-color: #fff;
 	margin: 0px;
@@ -77,6 +85,7 @@ code {
 	/*-moz-border-radius: 5px;
 	 border-radius: 5px;*/
 }
+
 #header_image {
 	width: 1000px;
 	height: 130px;
@@ -84,24 +93,61 @@ code {
 	background: url(../images/header.jpg) no-repeat left top;
 	float: left;
 }
+
+.btn {
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+	padding: 6px 40px 6px 40px;
+	color: #658240;
+	text-decoration: none;
+	text-align: center;
+}
+
+.btn:hover {
+	color: #3D4F7D;
+	background-color: #C9DAB4;
+}
+
+input {
+	border: 1px solid #ccc;
+	background-color: #f8f8f8;
+	padding: 3px 5px 3px 5px;
+	color: #333;
+	text-decoration: none;
+	text-align: left;
+}
+
+button {
+	border: 1px solid #ccc;
+	background-color: #f0f0f0;
+	padding: 6px 20px 6px 20px;
+	color: #3D4F7D;
+	text-decoration: none;
+	text-align: center;
+}
+
+button:hover {
+	border: 1px solid #999;
+	background-color: #e7e7e7;
+}
+
 /*
  Breadcrumbs
  */
-
 .breadcrumbs {
 	margin: 10px;
 }
+
 /*
  MENU
  * */
-
 #menu-header {
 	background: #000;
 	display: block;
 	margin: 0px;
-	height:35px;
+	height: 35px;
 	background: url(../images/topnav_bg.gif) repeat-x;
-	font-family:"Tahoma";
+	font-family: "Tahoma";
 }
 
 ul.topnav {
@@ -113,14 +159,16 @@ ul.topnav {
 	background: #222;
 	font-size: 14px;
 	background: url(../images/topnav_bg.gif) repeat-x;
-	
 }
+
 ul.topnav li {
 	float: left;
 	margin: 0;
 	padding: 0 15px 0 0;
-	position: relative; /*--Declare X and Y axis base for sub navigation--*/
+	position: relative;
+	/*--Declare X and Y axis base for sub navigation--*/
 }
+
 ul.topnav li a {
 	padding: 8px 5px;
 	color: #e1e1e1;
@@ -128,23 +176,27 @@ ul.topnav li a {
 	text-decoration: none;
 	float: left;
 }
+
 ul.topnav li a:hover {
 	color: #f1f1f1;
 	background: url(../images/topnav_hover.gif) no-repeat center top;
 }
+
 ul.topnav li span { /*--Drop down trigger styles--*/
 	width: 17px;
 	height: 35px;
 	float: left;
 	background: url(../images/subnav_btn.gif) no-repeat center top;
 }
+
 ul.topnav li span.subhover {
 	background-position: center bottom;
 	cursor: pointer;
-}/*--Hover effect for trigger--*/
+}  /*--Hover effect for trigger--*/
 ul.topnav li ul.subnav {
 	list-style: none;
-	position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/
+	position: absolute;
+	/*--Important - Keeps subnav from affecting main navigation flow--*/
 	left: 0;
 	top: 35px;
 	background: #333;
@@ -155,6 +207,7 @@ ul.topnav li ul.subnav {
 	width: 170px;
 	border: 1px solid #111;
 }
+
 ul.topnav li ul.subnav li {
 	margin: 0;
 	padding: 0;
@@ -163,12 +216,17 @@ ul.topnav li ul.subnav li {
 	clear: both;
 	width: 170px;
 }
+
 html ul.topnav li ul.subnav li a {
 	float: left;
 	width: 145px;
-	background: #333 url(../images/dropdown_linkbg.gif) no-repeat 10px center;
+	background: #333 url(../images/dropdown_linkbg.gif) no-repeat 10px
+		center;
 	padding-left: 20px;
 }
-html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
-	background: #222 url(../images/dropdown_linkbg.gif) no-repeat 10px center;
+
+html ul.topnav li ul.subnav li a:hover {
+	/*--Hover effect for subnav links--*/
+	background: #222 url(../images/dropdown_linkbg.gif) no-repeat 10px
+		center;
 }
