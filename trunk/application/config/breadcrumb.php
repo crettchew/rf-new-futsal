@@ -34,7 +34,7 @@ $config['multilang'] = FALSE;
  * then initial/home breadcrumb will disappear
  * 
  */
-$config['set_home'] = "Home";
+$config['set_home'] = "Página Principal";
 
 /**
  * ------------------------

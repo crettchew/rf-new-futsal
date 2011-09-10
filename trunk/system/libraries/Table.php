@@ -36,12 +36,14 @@ class CI_Table {
 	var $newline			= "\n";
 	var $empty_cells		= "";
 	var	$function			= FALSE;
+	var $heading_width= array(); 
 
 	public function __construct()
 	{
 		log_message('debug', "Table Class Initialized");
 	}
-
+	
+	
 	// --------------------------------------------------------------------
 
 	/**
@@ -79,6 +81,21 @@ class CI_Table {
 	}
 
 	// --------------------------------------------------------------------
+	
+	/**
+	 * Define td widths
+	 * @access	public
+	 * @param	array
+	 * @return	void
+	 */
+	function set_heading_width()
+    {
+        $args = func_get_args();
+        $this->heading_width = (is_array($args[0])) ? $args[0] : $args;
+    } 
+	
+    // --------------------------------------------------------------------
+	
 
 	/**
 	 * Set columns.  Takes a one-dimensional array as input and creates
@@ -303,6 +320,7 @@ class CI_Table {
 			$out .= $this->newline;
 		}
 
+		
 		// Build the table rows
 		if (count($this->rows) > 0)
 		{
@@ -310,6 +328,7 @@ class CI_Table {
 			$out .= $this->newline;
 
 			$i = 1;
+			
 			foreach ($this->rows as $row)
 			{
 				if ( ! is_array($row))
@@ -323,10 +342,12 @@ class CI_Table {
 				$out .= $this->template['row_'.$name.'start'];
 				$out .= $this->newline;
 
+				$j=0;
 				foreach ($row as $cell)
 				{
-					$temp = $this->template['cell_'.$name.'start'];
-
+					//$temp = $this->template['cell_'.$name.'start'];
+					$temp = str_replace('>',' style="'.$this->heading_width[$j].'">',$this->template['cell_'.$name.'start']);
+				
 					foreach ($cell as $key => $val)
 					{
 						if ($key != 'data')
@@ -355,6 +376,7 @@ class CI_Table {
 					}
 
 					$out .= $this->template['cell_'.$name.'end'];
+					$j++;  // add this line here
 				}
 
 				$out .= $this->template['row_'.$name.'end'];
@@ -386,6 +408,7 @@ class CI_Table {
 		$this->rows				= array();
 		$this->heading			= array();
 		$this->auto_heading		= TRUE;
+        $this->heading_width    = array();
 	}
 
 	// --------------------------------------------------------------------
