@@ -117,7 +117,7 @@ input {
 	text-align: left;
 }
 
-button {
+button,.buttom {
 	border: 1px solid #ccc;
 	background-color: #f0f0f0;
 	padding: 6px 20px 6px 20px;
@@ -126,7 +126,7 @@ button {
 	text-align: center;
 }
 
-button:hover {
+button:hover,.buttom:hover {
 	border: 1px solid #999;
 	background-color: #e7e7e7;
 }
@@ -192,7 +192,7 @@ ul.topnav li span { /*--Drop down trigger styles--*/
 ul.topnav li span.subhover {
 	background-position: center bottom;
 	cursor: pointer;
-}  /*--Hover effect for trigger--*/
+} /*--Hover effect for trigger--*/
 ul.topnav li ul.subnav {
 	list-style: none;
 	position: absolute;
@@ -229,4 +229,57 @@ html ul.topnav li ul.subnav li a:hover {
 	/*--Hover effect for subnav links--*/
 	background: #222 url(../images/dropdown_linkbg.gif) no-repeat 10px
 		center;
+}
+
+/*
+LOGIN
+*/
+.login_container {
+	width: 400px;
+}
+
+.login_header {
+	border: 1px solid #ddd;
+	background-color: #f1f1f1;
+	padding: 10px;
+	text-align: center;
+	font-size: 18px;
+	color: #658240;
+	/*font-weight: bold;*/
+}
+
+.login_form {
+	border: 1px solid #ddd;
+	padding: 4px;
+}
+
+.login_table {
+	
+}
+
+/*
+	ERRORS
+	*/
+.error_notification {
+	border: 1px solid #FF9999;
+	background: #FFEEEE;
+	padding: 10px;
+}
+
+.error_title {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.error_message {
+	text-align: justify;
+}
+
+#close_error_message {
+	cursor: pointer;
+}
+
+#close_error_message:hover {
+	text-decoration: underline;
 }

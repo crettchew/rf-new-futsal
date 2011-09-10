@@ -66,6 +66,18 @@
 
 <ul class="topnav">
 	<li><?php echo anchor('', 'Página Inicial'); ?></li>
+	
+	<?php 
+	
+	if (!isset($this->session->userdata['logged_in'])){
+		$logged_in = FALSE;
+	}
+	else{
+		$logged_in = $this->session->userdata['logged_in'];
+	}
+	
+	if ($logged_in){?>
+	
 	<li><?php echo anchor('app/intro', 'Torneios'); ?>
 	<ul class="subnav">
 		<li><?php echo anchor('app', 'Visualizar dados do Torneio'); ?></li>
@@ -113,7 +125,8 @@
 		<li><?php echo anchor('app', 'Gestão de Equipas de Arbitragem'); ?></li>
 	</ul>
 	</li>
-	<li><a href="#">Sair</a></li>
+	<li><?php echo anchor('home/processalogout', 'Sair'); ?></li>
+	<?php }?>
 </ul>
 
 </div>
@@ -122,8 +135,14 @@
 <div class="breadcrumbs">
 	<?php
 	$this->load->helper('breadcrumb'); 
-	$exclude = array('0' => 'home');
-	$exclude = array('1' => 'app');
+	$exclude = array('0' => 'home',
+					 '1' => 'processalogin',
+					 '2' => 'app'	,
+					 '3' => 'processalogout'				
+					);
 	echo set_breadcrumb(' > ', $exclude);
+	
+	
+	
 	?>
 </div>
