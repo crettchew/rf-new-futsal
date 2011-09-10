@@ -66,8 +66,7 @@
 
 <ul class="topnav">
 	<li><?php echo anchor('', 'Página Inicial'); ?></li>
-	<li><?php echo anchor('home/login', 'Login'); ?></li>
-	<li><?php echo anchor('app', 'Torneios'); ?>
+	<li><?php echo anchor('app/intro', 'Torneios'); ?>
 	<ul class="subnav">
 		<li><?php echo anchor('app', 'Visualizar dados do Torneio'); ?></li>
 		<li><?php echo anchor('app', 'Editar dados do Torneio'); ?></li>
@@ -114,8 +113,17 @@
 		<li><?php echo anchor('app', 'Gestão de Equipas de Arbitragem'); ?></li>
 	</ul>
 	</li>
-	<li><a href="#">Sair da Aplicação</a></li>
+	<li><a href="#">Sair</a></li>
 </ul>
 
 </div>
 <div id="container">
+
+<div class="breadcrumbs">
+	<?php
+	$this->load->helper('breadcrumb'); 
+	$exclude = array('0' => 'home');
+	$exclude = array('1' => 'app');
+	echo set_breadcrumb(' > ', $exclude);
+	?>
+</div>
