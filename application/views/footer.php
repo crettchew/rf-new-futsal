@@ -1,8 +1,6 @@
 <div id="download_regras" align="center">
-	<br>
-	<br> <a class="btn" target="_blank" href="<?php echo base_url("files/leis_futsal_2010_11.pdf")?>">Cique aqui para aceder às regras actuais do Futsal
-		definidas pela FIFA</a> <br>
-	<br>
+	<br> <br> <a class="btn" target="_blank" href="<?php echo base_url("files/leis_futsal_2010_11.pdf")?>">Cique aqui para aceder às regras actuais do
+		Futsal definidas pela FIFA</a> <br> <br>
 </div>
 
 <div class="footer">
