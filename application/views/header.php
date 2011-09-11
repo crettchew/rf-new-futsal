@@ -116,7 +116,7 @@
 			</li>
 			<li><a href="#">Administração</a>
 				<ul class="subnav">
-					<li><?php echo anchor('app', 'Gestão de Utilizadores'); ?></li>
+					<li><?php echo anchor('administracao/utilizadores', 'Gestão de Utilizadores'); ?></li>
 					<li><?php echo anchor('app', 'Gestão de Torneios'); ?></li>
 					<li><?php echo anchor('app', 'Gestão de Equipas de Arbitragem'); ?></li>
 				</ul>
@@ -128,10 +128,12 @@
 	</div>
 	<div id="container">
 
-		<div class="breadcrumbs">
-		<?php
-		$this->load->helper('breadcrumb');
-		$exclude = array('0' => 'home',
+		<table style="width: 100%;">
+			<tr align="left">
+				<td><div class="breadcrumbs">
+				<?php
+				$this->load->helper('breadcrumb');
+				$exclude = array('0' => 'home',
 					 '1' => 'processalogin',
 					 '2' => 'app'	,
 					 '3' => 'processalogout'				
@@ -139,4 +141,15 @@
 					 echo set_breadcrumb(' > ', $exclude);
 
 					 ?>
-		</div>
+					</div></td>
+				<td align="right"><?php 
+				if ($logged_in){
+					//var_dump($this->session->userdata);
+					echo "Olá <b>".$this->session->userdata['username']."</b>. Bem vindo à aplicação.<br>
+					IP: ".$this->session->userdata['ip_address']."<br>
+					";
+				}
+				?>
+				</td>
+			</tr>
+		</table>

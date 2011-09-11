@@ -287,3 +287,27 @@ LOGIN
 #close_error_message:hover {
 	text-decoration: underline;
 }
+
+/*
+TABLES
+*/
+
+.my_table{
+	width: 100%;
+}
+
+
+/*
+LINKS UTEIS
+*/
+
+
+#links_uteis a{
+text-decoration: none;
+}
+
+#links_uteis a:hover{
+color: #5a7435;
+text-decoration: underline;
+}
+
