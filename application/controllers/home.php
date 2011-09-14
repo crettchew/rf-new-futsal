@@ -23,7 +23,7 @@ class Home extends CI_Controller {
 								<div class="login_container">
 								<div class="login_header ">Login</div>';
 		$data['form_login'].= $this->criaFormularioLogin("", "");
-		$data['form_login'].='</div></div>';
+		$data['form_login'].='</div></div>'.br(2);
 
 		$this->load->view('header');
 
@@ -54,7 +54,7 @@ class Home extends CI_Controller {
 								<div class="login_container">
 								<div class="login_header ">Login</div>';
 			$data['form_login'].= $this->criaFormularioLogin("Erro no processo de Login", "O username e/ou password que introduziu não correspondem a uma conta válida.");
-			$data['form_login'].='</div></div>';
+			$data['form_login'].='</div></div>'.br(2);
 		}
 
 		$this->load->view('header');
@@ -117,6 +117,15 @@ class Home extends CI_Controller {
 		return $data['form_login'];
 	}
 
+	public function links()
+	{
+
+		$data['form_login']='';
+
+		$this->load->view('header');
+		$this->load->view('links_uteis', $data);
+		$this->load->view('footer');
+	}
 
 }
 

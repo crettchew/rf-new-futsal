@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE head PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-<meta charset="utf-8">
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Welcome to CodeIgniter</title>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url("css/styles.css") ?>">
 <script type="text/javascript" src="<?php echo base_url("js/jquery_1_6_3.js") ?>"></script>
@@ -30,7 +30,7 @@
 				}, function() {//On Hover Out
 					$(this).removeClass("subhover");
 					//On hover out, remove class "subhover"
-				})
+				});
 
 				$("ul.topnav li a").click(function() {//When trigger is clicked...
 
@@ -121,12 +121,19 @@
 					<li><?php echo anchor('app', 'Gestão de Equipas de Arbitragem'); ?></li>
 				</ul>
 			</li>
+			<?php }?>
+			<li><a href="#">Links</a>
+				<ul class="subnav">
+					<li><?php echo anchor('home/Links', 'Links Úteis'); ?></li>
+					<li><?php echo anchor(base_url("files/leis_futsal_2010_11.pdf"),'Regras do	Futsal definidas pela FIFA', 'target="_blank"'); ?></li>
+				</ul> <?php if ($logged_in){?>
 			<li><?php echo anchor('home/processalogout', 'Sair'); ?></li>
 			<?php }?>
+
 		</ul>
 
 	</div>
-	<div id="container">
+	<div id="breadcrumbs">
 
 		<table style="width: 100%;">
 			<tr align="left">
@@ -153,3 +160,9 @@
 				</td>
 			</tr>
 		</table>
+	</div>
+
+
+<body>
+
+</html>
