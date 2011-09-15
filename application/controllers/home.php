@@ -31,6 +31,10 @@ class Home extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	/**
+	 * 
+	 * função que irá processar o login
+	 */
 	public function processaLogin()
 	{
 		$username= $_POST['username'];
@@ -54,14 +58,17 @@ class Home extends CI_Controller {
 								<div class="login_container">
 								<div class="login_header ">Login</div>';
 			$data['form_login'].= $this->criaFormularioLogin("Erro no processo de Login", "O username e/ou password que introduziu não correspondem a uma conta válida.");
-			$data['form_login'].='</div></div>'.br(2);
+			$data['form_login'].='<\/div><\/div>'.br(2);
 		}
 
 		$this->load->view('header');
 		$this->load->view('home',$data);
 		$this->load->view('footer');
 	}
-
+/**
+ * 
+ * Processa o Logout do utilizador
+ */
 	public function processaLogout()
 	{
 		ob_start();
@@ -69,7 +76,7 @@ class Home extends CI_Controller {
 		$this->session->unset_userdata($this->session->userdata);
 		$this->index();
 
-		echo'<script>alert("Logout efectuado com sucesso!\n\n\ Obrigado por utilizar a aplicação.");</script>';
+		echo'<script type="text/javascript">alert("Logout efectuado com sucesso!\n\n\ Obrigado por utilizar a aplicação.");</script>';
 
 	}
 
