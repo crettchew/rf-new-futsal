@@ -1,16 +1,16 @@
-<!DOCTYPE head PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<META http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Welcome to CodeIgniter</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>APSAA - IndoorGest</title>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url("css/styles.css") ?>">
 <script type="text/javascript" src="<?php echo base_url("js/jquery_1_6_3.js") ?>"></script>
-<script type="text/javascript">
+<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
 				//$('body').hide();
 				//$('body').fadeIn('slow');
 
-				$("ul.subnav").parent().append("<span></span>");
+				$("ul.subnav").parent().append("<span> <\/span>");
 				//Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)
 
 				$("ul.topnav li a").mouseover(function() {
@@ -126,7 +126,8 @@
 				<ul class="subnav">
 					<li><?php echo anchor('home/Links', 'Links Úteis'); ?></li>
 					<li><?php echo anchor(base_url("files/leis_futsal_2010_11.pdf"),'Regras do	Futsal definidas pela FIFA', 'target="_blank"'); ?></li>
-				</ul> <?php if ($logged_in){?>
+				</ul></li>
+				<?php if ($logged_in){?>
 			<li><?php echo anchor('home/processalogout', 'Sair'); ?></li>
 			<?php }?>
 
@@ -161,8 +162,3 @@
 			</tr>
 		</table>
 	</div>
-
-
-<body>
-
-</html>
