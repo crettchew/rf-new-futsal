@@ -35,15 +35,16 @@ a {
 h1, .title {
 	color: #444;
 	background-color: transparent;
+	background: url(../images/background_title.gif) no-repeat;
 	border-bottom: 1px solid #D0D0D0;
-	font-size: 19px;
+	font-size: 20px;
 	font-weight: normal;
-	margin: 0 5px 14px 5px;
-	padding: 14px 15px 10px 15px;
+	margin: 0px 5px 14px 5px;
+	padding: 14px 10px 5px 15px;
 }
 .sub-title {
 	padding-left: 10px;
-	padding-bottom: 20px;
+	padding-bottom: 5px;
 	font-size: 14px;
 	color: #555;
 	font-style: italic;
@@ -69,7 +70,7 @@ code {
 	border-top: 1px solid #D0D0D0;
 	line-height: 22px;
 	padding: 0 10px 0 10px;
-	margin: 20px 0 0 0;
+	margin: 10px 0 0 0;
 	background-color: #f6f6f6;
 }
 .footer table {
@@ -111,7 +112,7 @@ input {
 	text-decoration: none;
 	text-align: left;
 }
-button, .buttom {
+button, .button {
 	border: 1px solid #ccc;
 	background-color: #f0f0f0;
 	padding: 6px 20px 6px 20px;
@@ -119,10 +120,13 @@ button, .buttom {
 	text-decoration: none;
 	text-align: center;
 }
-button:hover, .buttom:hover {
+button:hover, .button:hover {
 	border: 1px solid #999;
 	background-color: #e7e7e7;
 }
+
+
+
 /*
  Breadcrumbs
  */
@@ -217,13 +221,13 @@ html ul.topnav li ul.subnav li a:hover {
  LOGIN
  */
 .login_container {
-	width: 400px;
+	width: 300px;
 	background-color: #fff;
 }
 .login_header {
 	border: 1px solid #999;
 	background-color: #f5f5f5;
-	padding: 10px;
+	padding: 6px;
 	text-align: center;
 	font-size: 18px;
 	color: #658240;
@@ -234,6 +238,16 @@ html ul.topnav li ul.subnav li a:hover {
 	padding: 4px;
 }
 .login_table {
+	font-size: 11px;
+}
+
+.login_table input{
+	margin: 0px;
+	padding: 2px;
+}
+
+.login_table .button{
+	padding: 3px 8px 3px 8px;
 }
 /*
  ERRORS

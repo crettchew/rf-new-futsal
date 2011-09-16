@@ -6,14 +6,14 @@
 </script>
 <div class="container">
 	<div class="title">
-		Bem vindo à aplicação <b>IndoorGuest</b>
+		Bem-vindo(a) à aplicação <b>IndoorGuest</b>
 	</div>
 	<div class="sub-title">
-		Aplicação de apoio à realização e gestão de torneios de futsal realizados pela Associação Progressiva de Santo António do
-		Alva.
+		O IndoorGuest é uma aplicação de apoio à gestão dos dados desportivos de torneios de futsal realizados pela Associação Progressiva de Santo António do
+		Alva. Qualquer dúvida ou questão na utilização do sistema, por favor contacte a pessoa responsável pelo torneio.
 	</div>
 	<div id="body">
-		<?php   echo $form_login;?>
+		<?php   if (isset($form_login))echo $form_login;?>
 	</div>
 	<table cellpadding="10px" border="0" cellspacing="10px" width="100%">
 		<tr style="vertical-align:text-top">

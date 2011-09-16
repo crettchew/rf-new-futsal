@@ -60,8 +60,6 @@
 
 			if ($username == "romeu" && $password == "fonseca") {
 
-				$data['form_login'] = 'LOGIN OK';
-
 				$newdata = array(
 						'username' => $username,
 						'user_id' => $username,
@@ -135,7 +133,7 @@
 					'maxlength' => '100',
 					'value' => '',
 					'size' => '50',
-					'style' => 'width:90%',
+					'style' => 'width:80%',
 			);
 
 			$this -> table -> add_row(array(
@@ -148,14 +146,14 @@
 			));
 			$this -> table -> add_row(array(
 					'',
-					form_submit('mysubmit', 'Entrar na aplicação', 'class="buttom"')
+					form_submit('mysubmit', 'Entrar na aplicação', 'class="button"')
 			));
 
 			$data['form_login'] .= $this -> table -> generate();
 			$data['form_login'] .= form_close();
 
 			if ($message != "" && $message_title != "") {
-				$data['form_login'] .= br(2) . format_Error($message_title, $message);
+				$data['form_login'] .= br(1) . format_Error($message_title, $message);
 			}
 
 			return $data['form_login'];
@@ -195,7 +193,7 @@
 					'style' => 'text-align: center'
 			));
 
-			for ($i=0; $i < 100; $i++) { 
+			for ($i=0; $i < 24; $i++) { 
 				$this -> table -> add_row(array('data' => 'Designação '.$i), array('data' => 'Designação '.$i));
 			}
 
@@ -228,7 +226,7 @@
 					'style' => 'text-align: center'
 			));
 
-			for ($i=0; $i < 20; $i++) { 
+			for ($i=0; $i < 10; $i++) { 
 				$this -> table -> add_row(array('data' => 'Designação '.$i), array('data' => 'Designação '.$i));
 			}
 
