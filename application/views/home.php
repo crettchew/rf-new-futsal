@@ -10,16 +10,27 @@
 	</div>
 	<div class="sub-title">
 		O IndoorGuest é uma aplicação de apoio à gestão dos dados desportivos de torneios de futsal realizados pela Associação Progressiva de Santo António do
-		Alva. Qualquer dúvida ou questão na utilização do sistema, por favor contacte a pessoa responsável pelo torneio.
+		Alva.
+		<br>Qualquer dúvida ou questão na utilização do sistema, por favor contacte a pessoa responsável pelo torneio.
 	</div>
 	<div id="body">
-		<?php   if (isset($form_login))echo $form_login;?>
+		<br>
+		<?php
+		if (isset($form_login))
+			echo $form_login;
+		?>
+		<div>
+			<?php
+			if (isset($torneios))
+				echo $torneios;
+			?>
+		</div>
 	</div>
 	<table cellpadding="10px" border="0" cellspacing="10px" width="100%">
 		<tr style="vertical-align:text-top">
 			<td><?php
-			if (isset($calendario))
-				echo $calendario;
+				if (isset($calendario))
+					echo $calendario;
 			?></td>
 			<td><?php
 				if (isset($classificacao))
