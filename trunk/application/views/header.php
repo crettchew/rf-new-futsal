@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url("css/styles.css") ?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url("css/smoothness/jquery-ui-1.8.16.custom.css") ?>">
 		<script type="text/javascript" src="<?php echo base_url("js/jquery_1_6_3.js") ?>"></script>
+		<script type="text/javascript" src="<?php echo base_url("js/jquery.dataTables.min.js") ?>"></script>
 		<script type="text/javascript" src="<?php echo base_url("js/jquery-ui-1.8.16.custom.min.js") ?>"></script>
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
@@ -77,7 +78,7 @@
 		<div id="menu-header">
 			<ul class="topnav">
 				<li>
-					<?php   echo anchor('', 'Página Inicial');?>
+					<?php     echo anchor('', 'Página Inicial');?>
 				</li>
 				<?php
 
@@ -92,24 +93,24 @@ if ($logged_in){
 				?>
 
 				<li>
-					<?php   echo anchor('app/intro', 'Torneios');?>
+					<?php     echo anchor('app/intro', 'Torneios');?>
 					<ul class="subnav">
 						<li>
-							<?php   echo anchor('app', 'Visualizar dados do Torneio');?>
+							<?php     echo anchor('app', 'Visualizar dados do Torneio');?>
 						</li>
 						<li>
-							<?php   echo anchor('app', 'Editar dados do Torneio');?>
+							<?php     echo anchor('home/torneios', 'Editar dados do Torneio');?>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<?php   echo anchor('app', 'Grupos');?>
+					<?php     echo anchor('app', 'Grupos');?>
 					<ul class="subnav">
 						<li>
-							<?php   echo anchor('app', 'Listar Grupos');?>
+							<?php     echo anchor('app', 'Listar Grupos');?>
 						</li>
 						<li>
-							<?php   echo anchor('app', 'Criar Novo Grupo');?>
+							<?php     echo anchor('app', 'Criar Novo Grupo');?>
 						</li>
 					</ul>
 				</li>
@@ -153,8 +154,26 @@ if ($logged_in){
 					</ul>
 				</li>
 				<li>
-					<a href="#">Classificação</a>
+					<a href="#">Relatórios</a>
 					<ul class="subnav">
+						<li>
+							<a href="#">Classificação Geral</a>
+						</li>
+						<li>
+							<a href="#">Melhor Marcador</a>
+						</li>
+						<li>
+							<a href="#">Jogador Mais Novo</a>
+						</li>
+						<li>
+							<a href="#">Classificação Geral</a>
+						</li>
+						<li>
+							<a href="#">Classificação Geral</a>
+						</li>
+						<li>
+							<a href="#">Classificação Geral</a>
+						</li>
 						<li>
 							<a href="#">Classificação Geral</a>
 						</li>
@@ -164,34 +183,49 @@ if ($logged_in){
 					<a href="#">Administração</a>
 					<ul class="subnav">
 						<li>
-							<?php   echo anchor('administracao/utilizadores', 'Gestão de Utilizadores');?>
+							<?php     echo anchor('administracao/Utilizadores', 'Gestão de Utilizadores');?>
 						</li>
 						<li>
-							<?php   echo anchor('app', 'Gestão de Torneios');?>
+							<?php     echo anchor('area/Torneios', 'Gestão de Torneios');?>
 						</li>
 						<li>
-							<?php   echo anchor('app', 'Gestão de Equipas de Arbitragem');?>
+							<?php     echo anchor('app', 'Gestão de Equipas de Arbitragem');?>
+						</li>
+						<li>
+							<?php     echo anchor('home/Links', 'Gestão de Calendário');?>
 						</li>
 					</ul>
 				</li>
-				<?php   }?>
+				<?php     }?>
 				<li>
 					<a href="#">Links</a>
 					<ul class="subnav">
 						<li>
-							<?php   echo anchor('home/Links', 'Links Úteis');?>
+							<?php     echo anchor('home/Links', 'Links Úteis');?>
 						</li>
 						<li>
-							<?php   echo anchor(base_url("files/leis_futsal_2010_11.pdf"), 'Regras do	Futsal definidas pela FIFA', 'target="_blank"');?>
+							<?php
+
+								$image_properties = array(
+										'src' => 'images/pdf-logo.png',
+										'alt' => 'Clique para aceder às regras do Futsal definidas pela FIFA',
+										'class' => 'post_images',
+										'width' => '20',
+										'height' => '20',
+										'title' => 'Clique para aceder às regras do Futsal definidas pela FIFA'
+								);
+
+								echo anchor(base_url("files/leis_futsal_2010_11.pdf"), 'Regras do Futsal definidas pela FIFA ' . img($image_properties), 'target="_blank"');
+							?>
 						</li>
 					</ul>
 				</li>
 				<?php if ($logged_in){
 				?>
 				<li>
-					<?php   echo anchor('home/processalogout', 'Sair');?>
+					<?php     echo anchor('home/processalogout', 'Sair');?>
 				</li>
-				<?php   }?>
+				<?php     }?>
 			</ul>
 		</div>
 		<div id="breadcrumbs">
@@ -205,7 +239,8 @@ if ($logged_in){
 									'0' => 'home',
 									'1' => 'processalogin',
 									'2' => 'app',
-									'3' => 'processalogout'
+									'3' => 'processalogout',
+									'4' => 'area'
 							);
 							echo set_breadcrumb(' > ', $exclude);
 						?>
@@ -214,7 +249,7 @@ if ($logged_in){
 						if ($logged_in) {
 							//var_dump($this->session->userdata);
 							echo "Olá <b>" . $this -> session -> userdata['username'] . "</b>. Bem vindo à aplicação.<br>";
-								//Acesso IP: " . $this -> session -> userdata['ip_address'] . "";
+							//Acesso IP: " . $this -> session -> userdata['ip_address'] . "";
 						}
 					?></td>
 				</tr>

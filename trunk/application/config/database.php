@@ -47,10 +47,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'www.santoantoniodoalva.com';
-$db['default']['username'] = 'santoant';
-$db['default']['password'] = 'alva';
-$db['default']['database'] = 'santoant_futsal';
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '3_fonseca';
+$db['default']['database'] = 'new_futsal';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

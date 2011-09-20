@@ -29,12 +29,16 @@
 			$this -> load -> view('header');
 
 			if ($this -> session -> userdata('logged_in')) {
-				$data['form_login'] = $this -> session -> userdata('logged_in') . ' LOGADO';
+				//$data['form_login'] = $this -> session -> userdata('logged_in') . ' LOGADO';
 				//getCalendario
 				$data['calendario'] = $this -> getCalendario();
 
 				//getClassificação
 				$data['classificacao'] = $this -> getClassificacao();
+
+				//getTorneios
+				$data['torneios'] = $this -> getTorneios();
+
 			}
 			else {
 				$data['form_login'] = "";
@@ -72,6 +76,9 @@
 
 				//getClassificação
 				$data['classificacao'] = $this -> getClassificacao();
+
+				//getTorneios
+				$data['torneios'] = $this -> getTorneios();
 
 			}
 			else {
@@ -193,8 +200,8 @@
 					'style' => 'text-align: center'
 			));
 
-			for ($i=0; $i < 24; $i++) { 
-				$this -> table -> add_row(array('data' => 'Designação '.$i), array('data' => 'Designação '.$i));
+			for ($i = 0; $i < 18; $i++) {
+				$this -> table -> add_row(array('data' => 'Designação ' . $i), array('data' => 'Designação ' . $i));
 			}
 
 			return $this -> table -> generate();
@@ -226,11 +233,43 @@
 					'style' => 'text-align: center'
 			));
 
-			for ($i=0; $i < 10; $i++) { 
-				$this -> table -> add_row(array('data' => 'Designação '.$i), array('data' => 'Designação '.$i));
+			for ($i = 0; $i < 10; $i++) {
+				$this -> table -> add_row(array('data' => 'Designação ' . $i), array('data' => 'Designação ' . $i));
 			}
 
 			return $this -> table -> generate();
+		}
+
+		/**
+		 *
+		 */
+		public function getTorneios() {
+			
+			$tmpl = array('table_open' => '<table border="0" width: "auto"" cellpadding="0" cellspacing="1" id="grupos_table" class="simple_table">');
+			$this -> table -> set_template($tmpl);
+			$this -> table -> set_heading_width('','','','','','','','','','','');
+			
+
+			$query = $this -> db -> query('select 
+												idtorneios as "ID", 
+												nome as "Nome Torneio", 
+												edicao as "Edição", 
+												data_inicio as "Data de Início", 
+												data_fim as "Data de Fim", 
+												isActive as "Activo", 
+												observacoes as "Observações",
+												cr_by as "Criado por", 
+												cr_dt as "Criado em", 
+												upd_by as "Alterado por", 
+												upd_dt as "Alterado em" 
+												from torneios where isActive = \'Y\'');
+
+			
+
+			//return 'Total Results: ' . $query -> num_rows();
+
+			return $this->table->generate($query);
+
 		}
 
 	}

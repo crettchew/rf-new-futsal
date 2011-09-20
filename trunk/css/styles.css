@@ -23,7 +23,7 @@ img {
 body {
 	background-color: #fff;
 	margin: 0px 0px 0px 0px;
-	font: 13px  /20px normal Helvetica, Arial, sans-serif;
+	font: 13px    /20px normal Helvetica, Arial, sans-serif;
 	color: #4F5155;
 	background-color: #fff;
 }
@@ -85,6 +85,9 @@ code {
 	 -moz-border-radius: 5px;
 	 border-radius: 5px;*/
 }
+#contents {
+	margin: 10px;
+}
 #header_image {
 	width: 1000px;
 	height: 130px;
@@ -124,9 +127,6 @@ button:hover, .button:hover {
 	border: 1px solid #999;
 	background-color: #e7e7e7;
 }
-
-
-
 /*
  Breadcrumbs
  */
@@ -240,13 +240,11 @@ html ul.topnav li ul.subnav li a:hover {
 .login_table {
 	font-size: 11px;
 }
-
-.login_table input{
+.login_table input {
 	margin: 0px;
 	padding: 2px;
 }
-
-.login_table .button{
+.login_table .button {
 	padding: 3px 8px 3px 8px;
 }
 /*
@@ -316,4 +314,78 @@ html ul.topnav li ul.subnav li a:hover {
 	background-color: #FFFFD4;
 	border: 1px solid #D9D900;
 	font-size: 14px;
+}
+/**
+ * 	TABELAS DATATABLES -------------------
+ * 	Parametrização de todos os estilos ---
+ */
+
+.simple_table {
+	text-align: center;
+	width: 100%;
+}
+
+.simple_table{
+	border: 1px solid #ccc;
+}
+
+.dataTables_wrapper th {
+	background-color: #DAEDB3;
+	font-size: 13px;
+	padding: 10px 10px 10px 20px;
+	border: 1px solid #c6c6c6;
+	text-align: left;
+}
+.dataTables_wrapper tr {
+	background-color: #f9f9f9;
+	font-size: 12px;
+}
+.dataTables_wrapper .odd {
+	background: #f0f0f0;
+}
+.dataTables_wrapper tr:hover {
+	background: #E7EFFA;
+}
+.dataTables_wrapper .sorting {
+	cursor: pointer;
+}
+.dataTables_info {
+	padding-top: 10px;
+	padding-left: 5px;
+	color: #444;
+	padding-bottom: 10px;
+}
+.simple_table .sorting_desc {
+
+	background: url(../images/sort_down_green.png) no-repeat center left;
+	background-color: #D0ED95;
+	border: 1px solid #aaa;
+}
+.dataTables_wrapper .sorting_asc {
+	background: url(../images/sort_up_green.png) no-repeat center left;
+	background-color: #D0ED95;
+	border: 1px solid #aaa;
+}
+.sorting_desc:hover, .sorting_asc:hover {
+	cursor: pointer;
+}
+.dataTables_wrapper .dataTables_length {
+	float: left;
+	padding: 10px;
+}
+.dataTables_filter {
+	float: right;
+	padding: 10px;
+}
+.detalhes {
+	padding: 4px;
+	display: block;
+	border: 1px solid #7D97CB;
+	
+	background: #F1F3F9;
+}
+
+.detalhes:hover{
+	border: 1px solid #7D97CB;
+	background: #E2E8F3;
 }
